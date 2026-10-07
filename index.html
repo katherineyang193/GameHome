@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#f8f5ff" />
-  <title>Katherine 遊戲屋</title>
+  <title>Meeska Mooska Mickey Mouse!</title>
   <meta name="description" content="可愛小遊戲集合，想玩哪個就出發！" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,29 +18,32 @@
   <main class="page-shell">
     <header class="hero">
       <div class="hero-badge">🎮 GAME HOME</div>
-      <h1>Katherine 遊戲屋</h1>
+      <h1>Meeska Mooska Mickey Mouse!</h1>
       <p>可愛小遊戲集合，想玩哪個就出發！ 🎈</p>
     </header>
 
-    <section class="games-section" aria-labelledby="games-title">
-      <div class="section-heading">
-        <div>
-          <span class="eyebrow">PLAY TIME</span>
-          <h2 id="games-title">今天想玩什麼？</h2>
-        </div>
-        <span class="game-count" id="gameCount"></span>
-      </div>
-
-      <div class="game-grid" id="gameGrid" aria-live="polite"></div>
-    </section>
+    <div id="categoryContainer"></div>
 
     <footer>
       <span>Made for little happy moments ✨</span>
     </footer>
   </main>
 
+  <template id="categoryTemplate">
+    <section class="games-section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow"></span>
+          <h2></h2>
+        </div>
+        <span class="game-count"></span>
+      </div>
+      <div class="game-grid"></div>
+    </section>
+  </template>
+
   <template id="gameCardTemplate">
-    <a class="game-card" target="_self">
+    <a class="game-card">
       <div class="card-art" aria-hidden="true">
         <div class="card-icon"></div>
         <div class="sparkle sparkle-a">✦</div>
@@ -54,7 +57,7 @@
         </div>
         <h3></h3>
         <p></p>
-        <span class="play-button">開始遊戲 <span>→</span></span>
+        <span class="play-button"><span class="play-label"></span> <span>→</span></span>
       </div>
     </a>
   </template>
