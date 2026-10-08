@@ -20,6 +20,15 @@ const categories = [
         status: "READY",
         cardBg: "linear-gradient(145deg, #e6f4ff, #efe7ff)",
         external: false
+      },
+      {
+        name: "NinjaRun",
+        description: "動起來挑戰忍者任務，看看今天能闖到哪一關！ 🥷",
+        icon: "🥷",
+        url: "https://katherineyang193.github.io/NinjaRun/",
+        status: "READY",
+        cardBg: "linear-gradient(145deg, #eaf7ee, #eef0ff)",
+        external: false
       }
     ]
   },
