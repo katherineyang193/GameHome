@@ -23,11 +23,20 @@ const categories = [
       },
       {
         name: "NinjaRun",
-        description: "動起來挑戰忍者任務，看看今天能闖到哪一關！ 🥷",
+        description: "動起來挑戰忍者任務，一起闖關！ 🥷",
         icon: "🥷",
         url: "https://katherineyang193.github.io/NinjaRun/",
         status: "READY",
         cardBg: "linear-gradient(145deg, #eaf7ee, #eef0ff)",
+        external: false
+      },
+      {
+        name: "Yoga Fitness",
+        description: "跟著提示伸展活動，輕鬆動一動 🧘",
+        icon: "🧘",
+        url: "https://katherineyang193.github.io/Yoga-Fitness/",
+        status: "READY",
+        cardBg: "linear-gradient(145deg, #f4eaff, #e8fff5)",
         external: false
       }
     ]
@@ -38,11 +47,29 @@ const categories = [
     items: [
       {
         name: "臺北狂飆",
-        description: "城市街景結合 3D 駕駛體驗，收藏起來慢慢玩 🚗",
+        description: "城市街景結合 3D 駕駛體驗 🚗",
         icon: "🏙️",
         url: "https://www.taipei-rush.app/",
         status: "收藏",
         cardBg: "linear-gradient(145deg, #e7f6ff, #fff4df)",
+        external: true
+      },
+      {
+        name: "fab24hr",
+        description: "體驗半導體晶圓廠工程師的一天 🏭",
+        icon: "🏭",
+        url: "https://fab24hr.com/",
+        status: "收藏",
+        cardBg: "linear-gradient(145deg, #edf2ff, #f1f6f7)",
+        external: true
+      },
+      {
+        name: "AI 趣味遊戲",
+        description: "鴻海教育基金會的 AI 互動遊戲集合 🤖",
+        icon: "🤖",
+        url: "https://tech.foxconnfoundation.org/comic-games/",
+        status: "收藏",
+        cardBg: "linear-gradient(145deg, #fff2dc, #e7f9ff)",
         external: true
       }
     ]
@@ -55,7 +82,6 @@ const gameCardTemplate = document.getElementById("gameCardTemplate");
 
 categories.forEach((category) => {
   const categoryFragment = categoryTemplate.content.cloneNode(true);
-  const section = categoryFragment.querySelector(".games-section");
   const eyebrow = categoryFragment.querySelector(".eyebrow");
   const heading = categoryFragment.querySelector("h2");
   const count = categoryFragment.querySelector(".game-count");
